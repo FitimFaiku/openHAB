@@ -1,6 +1,6 @@
 # openHAB
 
-##Git basic commandos:
+## Git basic commandos:
 git pull --> Pullen vom remote branch <br />
 git status --> Aktuellen stand sehen rot wenn nicht zu git hinzugefügt.<br />
 git add *|filename --> Ein File oder mehrere zu git hizufügen. <br />
