@@ -1,0 +1,16 @@
+sitemap knx label="KNX Demo Sitemap" {
+  Frame label="Demo Elements" {
+    Switch item=demoSwitch
+    Switch item=demoRollershutter
+    Switch item=demoRollershutter2
+    Text   item=demoContact
+    Text   item=demoTemperature
+    Text   item=demoTemperature2
+    Text   item=demoTemperature3
+    Text   item=demoTemperature4
+    Slider item=demoDimmer
+    Slider item=demoDimmer2
+    Text   item=demoString
+    Text   item=demoDatetime
+  }                
+}

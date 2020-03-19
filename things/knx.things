@@ -3,7 +3,7 @@ Bridge knx:ip:bridge [
     type="TUNNEL", 
     ipAddress="172.22.10.71", 
     portNumber=3671, 
-    localIp="172.22.1.25",
+    localIp="172.22.1.10",
     readingPause=50, 
     responseTimeout=10, 
     readRetriesLimit=3, 
@@ -17,7 +17,7 @@ Bridge knx:ip:bridge [
         readInterval=3600
     ] {
         Type switch        : demoSwitch        "Light A3"       [ ga="1/0/4+<1/0/5" ]
-        Type switch        : demoSwitch        "Light B2"       [ ga="0/0/1+<0/0/2" ]
+        Type switch        : demoSwitch2        "Light B2"       [ ga="1/1/2+<1/0/3" ]
         Type dimmer        : demoDimmer        "Dimmer A3"      [ switch="1/0/4+<1/0/5", position="1/0/7+<0/1/0", increaseDecrease="1/0/6" ]
         Type dimmer        : demoDimmer2        "Dimmer B2"      [ switch="1/1/2+<0/0/3", position="1/1/5+<0/1/1", increaseDecrease="1/1/4" ]
     }
