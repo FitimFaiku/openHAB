@@ -7,3 +7,6 @@ git add *|filename --> Ein File oder mehrere zu git hizufügen. <br />
 git status --> Aktuellen stand sehen grün wenn zu git hinzugefügt. <br />
 git commit -m "Message" --> Einene Commit erstellen zum pushen danach. <br />
 git push --> Aktuellen commit zu remote pushen. <br />
+
+## Sources 
+https://community.openhab.org/t/how-to-configure-separate-things-files-for-knx/50735/4 <br />
