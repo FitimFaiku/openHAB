@@ -21,24 +21,30 @@ Bridge knx:ip:bridge [
         Type dimmer        : demoDimmer        "Dimmer A3"      [ switch="1/0/4+<1/0/5", position="1/0/7+<0/1/0", increaseDecrease="1/0/6" ]
         Type dimmer        : demoDimmer2        "Dimmer B2"      [ switch="1/1/2+<0/0/3", position="1/1/5+<0/1/1", increaseDecrease="1/1/4" ]
     }
-	Thing device generic [
+	Thing device Jalousin [
         address="7.1.3",
         fetch=true,
         pingInterval=300,
         readInterval=3600
     ] {
-        Type rollershutter-control : controlRollershutter "Raum A shutter" [ upDown="2/0/0+3/4/2", stopMove="2/0/1", position="2/0/2" ]
-		Type rollershutter-control : controlRollershutter2 "Raum B shutter" [ upDown="2/1/0+3/4/2", stopMove="2/1/1", position="2/1/2" ]
+        Type switch        : demoSwitch3        "Light B1"       [ ga="1/1/0+<1/1/1" ]
+        Type rollershutter : demoRollershutter "Raum A shutter" [ upDown="2/0/0+3/4/2", stopMove="2/0/1", position="2/0/2" ]
+		Type rollershutter : demoRollershutter2 "Raum B shutter" [ upDown="2/1/0+3/4/2", stopMove="2/1/1", position="2/1/2" ]
     }
-	Thing device generic [
+	Thing device HLK [
         address="7.1.4",
         fetch=true,
         pingInterval=300,
         readInterval=3600
     ] {
-         Type number        : demoTemperature   "Raum A heating " [ ga="9.001:<3/0/1" ]
+         Type number        : demoTemperature   "Raum A heating" [ ga="9.001:<3/0/1" ]
 		 Type number        : demoTemperature2   "Raum A cooling" [ ga="9.001:<3/0/2" ]
 		 Type number        : demoTemperature3   "Raum B heating" [ ga="9.001:<3/1/3" ]
 		 Type number        : demoTemperature4   "Raum B cooling" [ ga="9.001:<3/1/4" ]
     }
+}
+Bridge openweathermap:weather-api:api "OpenWeatherMap Account" [apikey="e2d6d869d98862c0cb4c40a2b71aea20", refreshInterval=30, language="de"] {
+    Thing weather-and-forecast local "Local Weather And Forecast" [location="48,16", forecastHours=0, forecastDays=7]
+    Thing weather-and-forecast wien "Weather And Forecast In Wien" [location="25.782403,-80.264563", forecastHours=24, forecastDays=0]
+    Thing uvindex local "Local UV Index" [location="48,16", forecastDays=7]
 }
