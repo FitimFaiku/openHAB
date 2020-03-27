@@ -1,0 +1,39 @@
+rule "Abend"
+when
+Item demoSwitch1 received update ON
+then
+
+demoSwitch3.sendCommand(OFF)
+demoSwitch4.sendCommand(OFF)
+demoSwitch5.sendCommand(OFF)
+demoSwitch6.sendCommand(OFF)
+
+end
+rule "Nacht"
+when
+Item demoSwitch1 received update OFF
+then
+
+demoSwitch3.sendCommand(ON)
+demoSwitch4.sendCommand(ON)
+demoSwitch5.sendCommand(ON)
+demoSwitch6.sendCommand(ON)
+
+end
+rule "Einschalteiteit"
+when
+Time cron "0 50 10 ? * FRI"
+then
+
+demoSwitch2.sendCommand(ON)
+
+
+end
+rule "Auschaltzeit"
+when
+Time cron "0 56 10 ? * FRI"
+then
+
+demoSwitch2.sendCommand(OFF)
+
+end

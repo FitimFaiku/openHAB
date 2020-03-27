@@ -1,6 +1,12 @@
 sitemap knx label="KNX Demo Sitemap" {
   Frame label="Demo Elements" {
-    Switch item=demoSwitch
+    Switch item=Zentral
+    Switch item=Light A3
+    Switch item=demoSwitch2
+    Switch item=demoSwitch3
+    Switch item=demoSwitch4
+    Switch item=demoSwitch5
+    Switch item=demoSwitch6
     Switch item=demoRollershutter
     Switch item=demoRollershutter2
     Text   item=demoContact
@@ -8,9 +14,29 @@ sitemap knx label="KNX Demo Sitemap" {
     Text   item=demoTemperature2
     Text   item=demoTemperature3
     Text   item=demoTemperature4
-    Slider item=demoDimmer
+    Text   item=demoTemperature5
+    Slider item=Dimmer A3
     Slider item=demoDimmer2
     Text   item=demoString
     Text   item=demoDatetime
-  }                
-}
+  }    
+	Frame label="Local Weather Station" {
+        Text item=localStationId
+        Text item=localStationName
+        Mapview item=localStationLocation
+    }
+    Frame label="Current local weather" {
+        Text item=localLastMeasurement
+        Text item=localCurrentCondition
+        Image item=localCurrentConditionIcon
+        Text item=localCurrentTemperature
+        Text item=localCurrentPressure
+        Text item=localCurrentHumidity
+        Text item=localCurrentWindSpeed
+        Text item=localCurrentWindDirection
+        Text item=localCurrentCloudiness
+        Text item=localCurrentRainVolume
+        Text item=localCurrentSnowVolume
+        Text item=localCurrentVisibility
+    }
+	
