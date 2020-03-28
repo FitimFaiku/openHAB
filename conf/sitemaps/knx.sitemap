@@ -1,7 +1,7 @@
 sitemap knx label="KNX Demo Sitemap" {
   Frame label="Demo Elements" {
     Switch item=Zentral
-    Switch item=Light A3
+    Switch item=demoSwitch
     Switch item=demoSwitch2
     Switch item=demoSwitch3
     Switch item=demoSwitch4
@@ -11,11 +11,12 @@ sitemap knx label="KNX Demo Sitemap" {
     Switch item=demoRollershutter2
     Text   item=demoContact
     Text   item=demoTemperature
-    Text   item=demoTemperature2
+	Chart  item=demoTemperature refresh=1000 period=h service="rrd4j" legend=true    
+	Text   item=demoTemperature2
     Text   item=demoTemperature3
     Text   item=demoTemperature4
     Text   item=demoTemperature5
-    Slider item=Dimmer A3
+    Slider item=demoDimmer
     Slider item=demoDimmer2
     Text   item=demoString
     Text   item=demoDatetime
@@ -39,4 +40,4 @@ sitemap knx label="KNX Demo Sitemap" {
         Text item=localCurrentSnowVolume
         Text item=localCurrentVisibility
     }
-	
+	}

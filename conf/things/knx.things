@@ -3,7 +3,7 @@ Bridge knx:ip:bridge [
     type="TUNNEL", 
     ipAddress="172.22.10.71", 
     portNumber=3671, 
-    localIp="172.22.1.10",
+    localIp="172.22.1.11",
     readingPause=50, 
     responseTimeout=10, 
     readRetriesLimit=3, 
@@ -44,8 +44,8 @@ Bridge knx:ip:bridge [
          Type number        : demoTemperature   "Raum B Temperatur ist" 		[ ga="9.001:<3/1/0" ]
 		 Type number        : demoTemperature2  "Raum B Sollwertverschiebung" 	[ ga="9.001:<3/1/1" ]
 		 Type number        : demoTemperature3  "Raum B Sollwert Status" 		[ ga="9.001:<3/1/2" ]
-		 Type number        : demoTemperature4  "Raum B Stellgröße Heizen" 	[ ga="9.001:<3/1/3" ]
-		 Type number        : demoTemperature5  "Raum B Stellgröße Kühlen" 	[ ga="9.001:<3/1/4" ]
+		 Type number        : demoTemperature4  "Raum B Stellgröße Heizen" 		[ ga="9.001:<3/1/3" ]
+		 Type number        : demoTemperature5  "Raum B Stellgröße Kühlen" 		[ ga="9.001:<3/1/4" ]
     }
 }
 Bridge openweathermap:weather-api:api "OpenWeatherMap Account" [apikey="e2d6d869d98862c0cb4c40a2b71aea20", refreshInterval=30, language="de"] {

@@ -1,0 +1,9 @@
+Strategies {
+    everyMinute : "0 * * * * ?"
+
+    default = everyChange
+}
+
+Items {
+    demoTemperature  : strategy=everyMinute, everyChange, restoreOnStartup
+}
